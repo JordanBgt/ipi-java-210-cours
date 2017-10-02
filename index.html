@@ -11,8 +11,8 @@
     <meta name="author" content="Pierre-Julien VILLOUD" />
 
 
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/idea.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     
@@ -59,8 +59,8 @@
           <a class="dropdown-item" href="#bases-types">Types primitifs de données</a>
           <a class="dropdown-item" href="#bases-typesenumeres">Types énumérés</a>
           <a class="dropdown-item" href="#bases-variables">Variables</a>
-          <a class="dropdown-item" href="#bases-methodes">Méthodes</a>
           <a class="dropdown-item" href="#bases-constantes">Constantes</a>
+          <a class="dropdown-item" href="#bases-methodes">Méthodes</a>
           <a class="dropdown-item" href="#bases-operateurs">Opérateurs</a>
           <a class="dropdown-item" href="#bases-conversions">Conversions et transtypages</a>
           <a class="dropdown-item" href="#bases-tableaux">Tableaux</a>
@@ -94,11 +94,15 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownBonus">
           <a class="dropdown-item" href="#bonus-recursivite">La récursivité</a>
+          <a class="dropdown-item" href="#bonus-maitrise">Maitriser son IDE</a>
+          <a class="dropdown-item" href="#bonus-ellipsis">Méthode à <em>ellipsis</em></a>
         </div>
       </li>
     </ul>
     <span class="navbar-text">
         <div class="btn-group" role="group" aria-label="Basic example">
+            <a class="btn btn-primary" href="https://github.com/pjvilloud/ipi-java-210-ex" target="_blank"><i class="fa fa-icon fa-gamepad"></i></a>
+            &nbsp;
             <a class="btn btn-primary" href="mailto:pjvilloud@protonmail.com"><i class="fa fa-icon fa-envelope"></i></a>
             &nbsp;
             <a class="btn btn-primary" href="https://github.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-github"></i></a>
@@ -125,7 +129,8 @@
                 <div class="big-top-margin">
                     <h3><i class="fa fa-icon fa-envelope-square"></i>&nbsp;<a href="mailto:pjvilloud@protonmail.com">pjvilloud@protonmail.com</a></h3>
                     <h3><i class="fa fa-icon fa-github-square"></i>&nbsp;<a href="https://github.com/pjvilloud" target="_blank">https://github.com/pjvilloud</a></h3>
-                    <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://github.com/pjvilloud" target="_blank">https://linkedin.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-linkedin-square"></i>&nbsp;<a href="https://linkedin.com/pjvilloud" target="_blank">https://linkedin.com/pjvilloud</a></h3>
+                    <h3><i class="fa fa-icon fa-globe"></i>&nbsp;<a href="http://pjvilloud.github.io" target="_blank">http://pjvilloud.github.io</a></h3>
                 </div>
             </p>
           </div>
@@ -143,15 +148,15 @@
                   <li class="list-group-item">Simplicité, Orienté Objet, et Familié</li>
                   <li class="list-group-item">Robustesse et Sécurité</li>
                   <li class="list-group-item">Architecture neutre et Portabilité</li>
-                  <li class="list-group-item">Performances élevées</li>
                   <li class="list-group-item">Interprété, Multithread, et Dynamique</li>
+                  <li class="list-group-item">Performances élevées</li>
                 </ul>
             </div>
           </div>
         </div>
     </div>
 
-    <div id="introduction-simplicite" class="step slide" data-nb="3" data-x="2000" data-y=1100>
+    <div id="introduction-simplicite" class="step slide" data-nb="3" data-rel-x="2000" data-y=1100>
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid text-center">
             <h1 class="display-3">Simplicité, Orienté Objet, et Familié</h1>
@@ -167,41 +172,62 @@
         </div>
     </div>
 
-    <div id="introduction-robustesse" class="step slide" data-nb="4" data-x="4000" data-y=1100>
+    <div id="introduction-robustesse" class="step slide" data-nb="4" data-rel-x="2000" data-y=1100>
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid text-center">
             <h1 class="display-3">Robustesse et Sécurité</h1>
             <div class="container">
+                <ul class="list-group">
+                    <li class="list-group-item">Early checking</li>
+                    <li class="list-group-item">Run-time checking</li>
+                    <li class="list-group-item">Allocation mémoire gérée par la JVM</li>
+                    <li class="list-group-item">Conçu pour rendre impossible certaines attaques</li>
+                </ul>
             </div>
           </div>
         </div>
     </div>
 
-    <div id="introduction-architecture" class="step slide" data-nb="5" data-x="6000" data-y=1100>
+    <div id="introduction-architecture" class="step slide" data-nb="5" data-rel-x="2000" data-y=1100>
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid text-center">
             <h1 class="display-3">Architecture neutre et Portabilité</h1>
             <div class="container">
+              <ul class="list-group">
+                  <li class="list-group-item">Bytecode</li>
+                  <li class="list-group-item">S'exécute partout où une JVM est présente</li>
+                  <li class="list-group-item">Taille et types de données spécifiés</li>
+              </ul>
             </div>
           </div>
         </div>
     </div>
 
-    <div id="introduction-performances" class="step slide" data-nb="6" data-x="8000" data-y=1100>
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container-fluid text-center">
-            <h1 class="display-3">Performances élevées</h1>
-            <div class="container">
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <div id="introduction-interprete" class="step slide" data-nb="7" data-x="10000" data-y=1100>
+    <div id="introduction-interprete" class="step slide" data-nb="6" data-rel-x="2000" data-y=1100>
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid text-center">
             <h1 class="display-3">Interprété, Multithread, et Dynamique</h1>
             <div class="container">
+              <ul class="list-group">
+                  <li class="list-group-item">Exécution de bytecode</li>
+                  <li class="list-group-item">Chargement de code depuis Internet</li>
+                  <li class="list-group-item">Reflection</li>
+                  <li class="list-group-item">The Fragile Superclass Problem</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="introduction-performances" class="step slide" data-nb="7" data-rel-x="2000" data-y=1100>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container-fluid text-center">
+            <h1 class="display-3">Performances élevées</h1>
+            <div class="container">
+              <ul class="list-group">
+                  <li class="list-group-item">Interprétation de bytecode plus lente...</li>
+                  <li class="list-group-item">Compilateurs JIT</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -213,11 +239,11 @@
             <h1 class="display-3">Exemple de programme java</h1>
             <div class="big-top-margin container-fluid text-left">
             <pre><code class="java">
-<span data-toggle="popover" data-trigger="hover" data-placement="top" title="Mot-clé 'public'" data-content="Ceci est un spécificateur d'accès qui indique la visibilité de la classe des autres parties du programme.">public</span> <span data-toggle="popover" data-offset="140px" data-trigger="hover" data-placement="top" title="Mot-clé 'class'" data-content="Tout (ou presque...) ce qui est programmé en java se trouve à l'intérieur d'une classe.">class</span> <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Nom de la classe" data-content="Le nom donné à votre classe, mais également le nom de votre fichier, HelloWorld.java">HelloWorld</span>
+<span data-toggle="popover" data-trigger="hover" data-placement="top" title="Mot-clé 'public'" data-content="Ceci est un spécificateur d'accès qui indique la visibilité de la classe par les autres parties du programme.">public</span> <span data-toggle="popover" data-offset="140px" data-trigger="hover" data-placement="top" title="Mot-clé 'class'" data-content="Tout (ou presque...) ce qui est programmé en java se trouve à l'intérieur d'une classe.">class</span> <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Nom de la classe" data-content="Le nom donné à votre classe, mais également le nom de votre fichier, <code>HelloWorld.java</code>">HelloWorld</span>
 {
     public static void <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Méthode 'main'" data-content="Le point d'entrée de la classe. Tout programme java doit avoir un point d'entrée 'main' dont l'entête est identique à ce qui est présenté ici.">main(String[] args)</span>
     {
-        <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Instruction" data-content="Le corps de la méthode contient un ou plusieurs instructions. Une instruction finit toujours par un ';' mais peut être écrite sur plusieurs lignes. Ici cette instruction affiche le texte 'Hello World' dans la console et effectue un retour à la ligne.">System.out.println("Hello World");</span>
+        <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Instruction" data-content="Le corps de la méthode contient une ou plusieurs instructions. Une instruction finit toujours par un ';' mais peut être écrite sur plusieurs lignes. Ici cette instruction affiche le texte 'Hello World' dans la console et effectue un retour à la ligne.">System.out.println("Hello World");</span>
     }
 <span data-toggle="popover" data-trigger="hover" data-placement="bottom" title="Accolades" data-content="Les accolades délimitent le début et la fin de la classe, ou de la méthode, ou d'une instruction.">}</span></code></pre>
             </div>
@@ -268,7 +294,7 @@
                       data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Nom de fichier : Le nom de fichier doit s'appeler comme la classe qu'il contient suivi de l'extension <code>.java</code></li>
                       <li class="list-group-item list-group-item-danger" data-toggle="popover" data-trigger="hover click" data-placement="right" title="Identificateurs" 
                       data-content="Les majuscules A-Z, les minuscules a-z, les chiffres 0-9 ainsi que le caractère _ sont autorisés. Les identificateurs sont sensibles à la casse. <code>monentier</code> est différent de <code>monEntier</code>. Les <a href=&quote;https://en.wikipedia.org/wiki/List_of_Java_keywords&quote;>mots réservés</a> java ne peuvent être utilisés comme indicateurs." 
-                      data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Identificateurs : Un identificateur est composé de lettres et de chiffres et sont sensibles à la casse</li>
+                      data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Identificateurs : Un identificateur est composé de lettres et de chiffres et est sensible à la casse</li>
                       <li class="list-group-item list-group-item-danger" data-toggle="popover" data-trigger="hover click" data-placement="right" title="Séparateurs" 
                       data-content="Les espaces, tabulations, retours à la ligne sont considérés comme des séparateurs et il est possible d'en enchaîner plusieurs à la suite." 
                       data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Séparateurs : Deux identificateurs doivent être séparés par au moins un espace ou une fin de ligne.</li>
@@ -278,9 +304,9 @@
                       <li class="list-group-item list-group-item-warning" data-toggle="popover" data-trigger="hover click" data-placement="right" title="Indentation" 
                       data-content="L'indentation est souvent réalisée automatiquement lorsqu'on utilise un IDE (comme Eclipse par exemple). Se référer à un <a href=&quote;https://google.github.io/styleguide/javaguide.html&quote;>guide de style</a> pour en savoir plus." 
                       data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Indentation : Il est recommandé d'indenter son programme pour le rendre lisible.</li>
-                      <li class="list-group-item list-group-item-warning" data-toggle="popover" data-trigger="hover click" data-placement="right" title="Nom du fichier" 
+                      <li class="list-group-item list-group-item-warning" data-toggle="popover" data-trigger="hover click" data-placement="right" title="Caractères spéciaux" 
                       data-content="Les identificateurs <code>t€st prix$ réel</code> sont autorisés mais pas <code>adresseM@il</code>. Dans le doute, se contenter des caractères alpha-numériques non accentués pour éviter aussi les problèmes d'encodage." 
-                      data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Caractères accentués : Il est recommandé de pas utiliser de caractères accentués dans les identificateurs</li>
+                      data-html="true" data-template='<div class="popover large-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'>Caractères accentués et spéciaux : Il est recommandé de pas utiliser de caractères spéciaux ou accentués dans les identificateurs</li>
                     </ul>    
                 </div>
             </div>
@@ -298,8 +324,8 @@
                   <li class="list-group-item">Types primitifs de données</li>
                   <li class="list-group-item">Types énumérés</li>
                   <li class="list-group-item">Variables</li>
-                  <li class="list-group-item">Méthodes</li>
                   <li class="list-group-item">Constantes</li>
+                  <li class="list-group-item">Méthodes</li>
                   <li class="list-group-item">Opérateurs</li>
                   <li class="list-group-item">Conversions et transtypages</li>
                   <li class="list-group-item">Tableaux</li>
@@ -309,7 +335,7 @@
         </div>
     </div>
     
-    <div id="bases-commentaires" class="step slide" data-nb="12" data-x="2000" data-y="2200">
+    <div id="bases-commentaires" class="step slide" data-nb="12" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid text-center">
             <h1 class="display-3">Commentaires</h1>
@@ -328,7 +354,7 @@ public class HelloWorld
     */</span>
     public static void main(String[] args)
     {
-        <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Commentaire sur une ligne" data-content="Commentaire pour donner des informations sur le ou les instructions suivantes." data-html="true">//Affiche Hello World dans la console</span>
+        <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Commentaire sur une ligne" data-content="Commentaire pour donner des informations sur la ou les instructions suivantes." data-html="true">//Affiche Hello World dans la console</span>
         System.out.println("Hello World");
     }
 }</code></pre>
@@ -337,7 +363,7 @@ public class HelloWorld
         </div>
     </div>
 
-    <div id="bases-types" class="step slide" data-nb="13" data-x="4000" data-y="2200">
+    <div id="bases-types" class="step slide" data-nb="13" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
           <div class="container-fluid text-center">
             <h1 class="display-3">Types primitifs de données</h1>
@@ -359,7 +385,7 @@ public class HelloWorld
         </div>
     </div>
 
-    <div id="bases-types-entiers" class="step slide" data-nb="14" data-x="6000" data-y="2200">
+    <div id="bases-types-entiers" class="step slide" data-nb="14" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Entiers</h1>
@@ -403,7 +429,7 @@ public class HelloWorld
         </div>
     </div>
 
-    <div id="bases-types-reels" class="step slide" data-nb="15" data-x="8000" data-y="2200">
+    <div id="bases-types-reels" class="step slide" data-nb="15" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Réels</h1>
@@ -443,7 +469,7 @@ public class HelloWorld
         </div>
     </div>
 
-    <div id="bases-types-char" class="step slide" data-nb="16" data-x="10000" data-y="2200">
+    <div id="bases-types-char" class="step slide" data-nb="16" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Caractère</h1>
@@ -455,14 +481,14 @@ public class HelloWorld
                         <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Deux octets ne suffisant pas à représenter l'ensemble des caractères de toutes les langues, il faut donc parfois utiliser deux <em>unités de code</em> UTF-16 pour représenter un <em>point de code</em> (= caractère). Ex : U+D835 et U+DD6B sont <em>deux unités de code</em> UTF-16 pour afficher le <em>point de code</em> U+1D56B représentant le caractère Unicode 𝕫
                     </div>
                     <div class="alert alert-danger small-font" role="alert">
-                        <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Il est donc déconseillé d'utiliser le type <code>char</code> dans les programmes. Préfere le type <em>chaine</em>.
+                        <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Il est donc déconseillé d'utiliser le type <code>char</code> dans les programmes. Préfere le type <code>String</code>.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="bases-types-booleen" class="step slide" data-nb="17" data-x="12000" data-y="2200">
+    <div id="bases-types-booleen" class="step slide" data-nb="17" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Booléen</h1>
@@ -475,7 +501,7 @@ public class HelloWorld
         </div>
     </div>
 
-    <div id="bases-typesenumeres" class="step slide" data-nb="18" data-x="14000" data-y="2200">
+    <div id="bases-typesenumeres" class="step slide" data-nb="18" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Types énumérés</h1>
@@ -491,7 +517,7 @@ enum Taille {SMALL, MEDIUM, LARGE, EXTRA_LARGE};
         </div>
     </div>
 
-    <div id="bases-variables" class="step slide" data-nb="19" data-x="16000" data-y="2200">
+    <div id="bases-variables" class="step slide" data-nb="19" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Variables</h1>
@@ -510,7 +536,7 @@ Taille s = Taille.SMALL;//Déclaration d'une variable du type énuméré Taille<
                     </div>
                     <pre><code class="java small-font">int a, var1, monEntier;// Déconseillé car non pertinent
 double Salaire, primeFinAnnée; //Déconseillé car majuscule et accents
-short mon Age, prix€;//Erreur car espaces ou caractères non alpha-numériques
+short mon Age, m@x;//Erreur car espaces ou caractères non alpha-numériques
 boolean estPresent;//OK
 int age,Age,AGE;//Trois variables différentes car sensible à la casse.
 boolean public;//Interdit car public est un mot réservé de java</code></pre>
@@ -519,7 +545,36 @@ boolean public;//Interdit car public est un mot réservé de java</code></pre>
         </div>
     </div>
 
-    <div id="bases-methodes" class="step slide" data-nb="20" data-x="18000" data-y="2200">
+    <div id="bases-constantes" class="step slide" data-nb="20" data-rel-x="2000" data-y="2200">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid text-center">
+                <h1 class="display-3">Constantes</h1>
+                <div class="container-fluid text-left">
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une constante ne peut plus changer de valeur après son initialisation. On la déclare avec le mot <code>final</code>. Par convention, les noms des constantes sont en majuscules et les mots sont séparés par des _
+                    </div>
+                    <pre><code class="java small-font">public class ExempleConstantes {
+    //Visible dans toute la classe
+    public static final short NOMBRE_MOIS_ANNEE = 12;
+    public static final short NOMBRE_TRIMESTRE_ANNEE = NOMBRE_MOIS_ANNEE / 3;
+    public static void main(String[] args){
+        final short NOMBRE_JOURS_SEMAINE = 7;//Visible uniquement dans main
+        System.out.println("Nombre de mois dans l'année : " + NOMBRE_MOIS_ANNEE);
+        NOMBRE_JOURS_SEMAINE = 9;//Interdit ! Erreur de compilation
+    }
+}</code></pre>
+                    <div class="alert alert-primary small-font" role="alert">
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'utilisation du terme <code>static</code> permet de définir une constante de classe qui sera accessible en dehors de la classe : <code>ExempleConstantes.NOMBRE_MOIS_ANNEE</code>
+                    </div>
+
+                </div>
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bases-methodes" class="step slide" data-nb="21" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Méthodes</h1>
@@ -543,7 +598,7 @@ System.out.println(auCarre(4));
 //Affiche 16</code></pre>
                         </div>
                         <div class="col-lg-4">
-                          <pre><code class="java small-font"><span data-toggle="popover" data-trigger="hover" data-placement="top" title="Visibilité" data-content="Mot-clé facultatif précisant la visibilité de la méthode parmi <code>protected private public</code>. Lorsque rien n'est mentionné, la méthode est publique" data-html="true" data-offset="40">
+                          <pre><code class="java small-font"><span data-toggle="popover" data-trigger="hover" data-placement="top" title="Visibilité" data-content="Mot-clé facultatif précisant la visibilité de la méthode parmi <code>protected private public</code>. Lorsque rien n'est mentionné, la méthode est visible par tous le package" data-html="true" data-offset="40">
 public</span> void <span data-toggle="popover" data-trigger="hover" data-placement="right" title="Pas d'arguments" data-content="Lorsqu'il n'y a pas d'arguments, on se contente de mettre des parenthèses vides" data-html="true">afficheBonjour() </span>
 {
   //Cette méthode ne fait qu'afficher
@@ -557,40 +612,16 @@ afficheBonjour(); //Affiche "Bonjour !"</code></pre>
                     </div>
                   </div>
                   <div class="alert alert-primary small-font" role="alert">
-                      <i class="fa fa-icon fa-info-circle"></i>&nbsp;La notion de visibilité sera abordée en détail dans le cours Java 220.
+                      <i class="fa fa-icon fa-info-circle"></i>&nbsp;La notion de visibilité sera abordée en détail dans le cours <a href="https://pjvilloud.github.io/ipi-java-220-cours/#creer-visibilite">Java 220</a>.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="bases-constantes" class="step slide" data-nb="21" data-x="20000" data-y="2200">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container-fluid text-center">
-                <h1 class="display-3">Constantes</h1>
-                <div class="container-fluid text-left">
-                    <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une constante ne peut plus changer de valeur après son initialisation. On la déclare avec le mot <code>final</code>. Par convention, les noms des constantes sont en majuscules et les mots sont séparés par des _
-                    </div>
-                    <pre><code class="java small-font">public class ExempleConstantes {
-    //Visible dans toute la classe
-    public static final short NOMBRE_MOIS_ANNEE = 12;
-    public static final short NOMBRE_TRIMESTRE_ANNEE = NOMBRE_MOIS_ANNEE / 3;
-    public static void main(String[] args){
-        final short NOMBRE_JOURS_SEMAINE = 7;//Visible uniquement dans main
-        System.out.println("Nombre de mois dans l'année : " + NOMBRE_MOIS_ANNEE);
-        NOMBRE_JOURS_SEMAINE = 9;//Intertit ! Erreur de compilation
-    }
-}</code></pre>
-                    <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;L'utilisation du terme <code>static</code> permet de définir une constante de classe 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
-    <div id="bases-operateurs" class="step slide" data-nb="22" data-x="22000" data-y="2200">
+    <div id="bases-operateurs" class="step slide" data-nb="22" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Opérateurs arithmétiques</h1>
@@ -615,7 +646,7 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         </div>
     </div>
 
-    <div id="bases-operateurs-relationnels" class="step slide" data-nb="23" data-x="24000" data-y="2200">
+    <div id="bases-operateurs-relationnels" class="step slide" data-nb="23" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Opérateurs relationnels et booléens</h1>
@@ -645,12 +676,17 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
                         <tr>
                             <td>"ET" logique</td>
                             <td>&&</td>
-                            <td data-toggle="popover" data-trigger="hover" data-placement="top" data-content="A noter que la valeur de la deuxième expression n'est pas calculée si la première a pu être évaluée à <code>false</code> (puisque le résultat serait <code>false</code> de toute façon. Ainsi <code>x != 0 && 1 / x > 5</code> ne lance jamais d'erreurs car la division par 0 est évitée avec le premier test. L'inversion du test peut cependant lever une exception." data-html="true" data-template="<div class='popover large-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>"><pre><code class="java">true && false // false.</code></pre></td>
+                            <td><pre><code class="java">true && false // false.</code></pre></td>
                         </tr>
                         <tr>
                             <td>"OU" logique</td>
                             <td>||</td>
                             <td data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="De même, la deuxième expression n'est pas calculée si la première a pu être évaluée à <code>true</code> (puisque le résultat serait <code>true</code> de toute façon. Ainsi <code>x == 0 || 1 / x > 0 </code> ne lance jamais d'erreurs car la division par 0 est évitée avec le premier test. L'inversion du test peut cependant lever une exception." data-html="true" data-template="<div class='popover large-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>"><pre><code class="java">true || false // true</code></pre></td>
+                        </tr>
+                        <tr>
+                            <td>"NON" logique</td>
+                            <td>!</td>
+                            <td><pre><code class="java">!true // false.</code></pre></td>
                         </tr>
                         <tr>
                             <td>Infériorité</td>
@@ -676,7 +712,7 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         </div>
     </div>
 
-    <div id="bases-operateurs-binaires" class="step slide" data-nb="24" data-x="26000" data-y="2200">
+    <div id="bases-operateurs-binaires" class="step slide" data-nb="24" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Opérateurs binaires</h1>
@@ -721,15 +757,15 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
                         </tr>
                       </tbody>
                     </table>
-                    <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les opérateurs <code>&</code> et <code>|</code> donnent une valeur <code>boolean</code> lorsqu'ils sont appliqués à des <code>boolean</code> mais évaluent les deux arguments de chaque côté de l'opérateur, contrairement à <code>&&</code> et <code>||</code>.
+                    <div class="alert alert-warning small-font" role="alert">
+                        <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Les opérateurs <code>&</code> et <code>|</code> donnent une valeur <code>boolean</code> lorsqu'ils sont appliqués à des <code>boolean</code> mais évaluent les deux arguments de chaque côté de l'opérateur, contrairement à <code>&&</code> et <code>||</code>.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="bases-operateurs-priorites" class="step slide" data-nb="25" data-x="28000" data-y="2200">
+    <div id="bases-operateurs-priorites" class="step slide" data-nb="25" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Priorités des opérateurs</h1>
@@ -772,7 +808,7 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         </div>
     </div>
 
-    <div id="bases-conversions" class="step slide" data-nb="26" data-x="30000" data-y="2200">
+    <div id="bases-conversions" class="step slide" data-nb="26" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Conversions</h1>
@@ -796,8 +832,8 @@ float f = n;// f vaut 9.8765434E8</code></pre>
                             </ul>
                         </div>
                         <div class="col-lg-6 text-center">
-                            <img src="img/conversions.png" alt="Converions" class="img-fluid">
-                            <div class="alert alert-warning smaller-font" role="alert">
+                            <img src="img/conversions.png" alt="Converions" width="450">
+                            <div class="alert alert-warning small-font" role="alert">
                                 <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Les flèches noires représentent les conversions sans perte de données, les flèches en pointillées celles avec perte de données.
                             </div>
                         </div>
@@ -808,13 +844,14 @@ float f = n;// f vaut 9.8765434E8</code></pre>
         </div>
     </div>
 
-    <div id="bases-conversions-transtypages" class="step slide" data-nb="27" data-x="32000" data-y="2200">
+    <div id="bases-conversions-transtypages" class="step slide" data-nb="27" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Transtypages (cast)</h1>
                 <div class="container-fluid text-left">
                     <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est également possible de forcer manuellement ces conversions lorsque les besoins du programme le nécessitent. Pour cela, on prefixe la variable à transtyper du type cible entre parenthèses : <pre><code class="java">short s = 56;int i = (int) s</code></pre>
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est également possible de forcer manuellement ces conversions lorsque les besoins du programme le nécessitent. Pour cela, on prefixe la variable à transtyper du type cible entre parenthèses : <pre><code class="java">short s = 56;
+int i = (int) s</code></pre>
                     </div>
                     <p class="text-center">Exemples de transtypage :</p>
                     <div class="small-font">
@@ -827,20 +864,20 @@ int i = 55000;
 short s = (short)i; //s vaut -10536...</code></pre>
                     </div>
                     <div class="alert alert-warning small-font" role="alert">
-                        <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Le transtypage en doit pas être utilisé pour arrondir un nombre à virgule flottante. Il faut plutôt utiliser <code>Math.round(x)</code>.
+                        <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Le transtypage ne doit pas être utilisé pour arrondir un nombre à virgule flottante. Il faut plutôt utiliser <code>Math.round(x)</code>.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="bases-tableaux" class="step slide" data-nb="28" data-x="34000" data-y="2200">
+    <div id="bases-tableaux" class="step slide" data-nb="28" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Tableaux</h1>
                 <div class="container-fluid text-left">
                     <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est souvent utile de pouvoir gérer un ensemble de valeurs du même type. On utilise pour cela un tableau java.
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est souvent utile de pouvoir gérer un ensemble de valeurs du même type. On utilise pour cela un <strong>tableau</strong> java. A noter que la notion de <strong>tableau</strong> n'est pas un type primitif, il faut donc utiliser l'instruction <code>new</code> pour l'initialiser.
                     </div>
                     <div class="small-font">
                         <pre><code class="java">//Déclaration d'un tableau d'entier
@@ -851,8 +888,8 @@ tableauEntier = new int[50]; //Le tableau est vide et peut contenir jusqu'à 50 
 tableauEntier2 = new int[] {5, 4, 3, 8, 5}; //Déclare, initialise et remplit le tableau
 
 //Insertion d'un élément dans le tableau
-tableauEntier[0] = 5; //Mais l'entier 5 dans le premier élément du tableau.
-tableauEntier[100] = 10; //Exception, on essaye d'insérer au 101e élément du tableau.
+tableauEntier[0] = 5; //Met l'entier 5 dans le premier élément du tableau.
+tableauEntier[50] = 10; //Exception, on essaye d'insérer au 51e élément du tableau.
 
 //Accès à un élément dans un tableau
 int premierElement = tableauEntier[0];
@@ -865,11 +902,13 @@ int tailleTableau = tableauEntier.length;</code></pre>
                         <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Il est impossible de modifier la taille du tableau une fois créé.</code>
                     </div>
                 </div>
+                <div class="row">
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="bases-tableaux-manipulation" class="step slide" data-nb="29" data-x="36000" data-y="2200">
+    <div id="bases-tableaux-manipulation" class="step slide" data-nb="29" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Manipulation de tableaux</h1>
@@ -892,7 +931,7 @@ Arrays.sort(tableauEntier);
 int i = Arrays.binarySearch(tableauEntier, 5); //Renvoie l'indice de la valeur 5 si elle est trouvée ou une valeur négative sinon
 
 //Comparaison de tableau
-boolean egal = Arrays.equals(tableanEntier, tableauEntier2); //Renvoir true si les tableaux ont la même longueur et le même contenu
+boolean egal = Arrays.equals(tableanEntier, tableauEntier2); //Renvoie true si les tableaux ont la même longueur et le même contenu
 
 //Remplissage d'un tableau
 Arrays.fill(tableanEntier, 6); //Remplie tous les éléments du tableau avec la valeur 6</code></pre>
@@ -903,7 +942,7 @@ Arrays.fill(tableanEntier, 6); //Remplie tous les éléments du tableau avec la 
         </div>
     </div>
 
-    <div id="bases-tableaux-multi" class="step slide" data-nb="30" data-x="38000" data-y="2200">
+    <div id="bases-tableaux-multi" class="step slide" data-nb="30" data-rel-x="2000" data-y="2200">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Tableaux multi-dimensionnels</h1>
@@ -927,7 +966,7 @@ char [][] sudoku = {
 char i = sudoku[0][1];//i vaut '1'
 
 //Affectation d'un élément du tableau bidimensionnel
-sudoku[2][2] = '5';//La valeurs '?' est remplacée par '5'</code></pre>
+sudoku[2][2] = '5';//La valeur '?' est remplacée par '5'</code></pre>
                     </div>
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les tableaux multi-dimensionnels ne sont rien d'autre que des tableaux de tableaux (de tableaux...).
@@ -941,9 +980,9 @@ sudoku[2][2] = '5';//La valeurs '?' est remplacée par '5'</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Flux d'exécution</h1>
-                <div class="container-fluid">
+                <div class="container">
                     <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le flux d'exécution du programme peut être contrôle pour satisfaire les besoins du programme.
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le <strong>flux d'exécution</strong> du programme peut être contrôlé pour satisfaire les besoins du programme.
                     </div>
                     <div class="small-font">
                         <ul class="list-group">
@@ -958,13 +997,13 @@ sudoku[2][2] = '5';//La valeurs '?' est remplacée par '5'</code></pre>
         </div>
     </div>
 
-    <div id="flux-portee" class="step slide" data-nb="32" data-x="2000" data-y="3300">
+    <div id="flux-portee" class="step slide" data-nb="32" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Portée d'un bloc</h1>
                 <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;La notion de bloc est importante dans la gestion du flux d'exécution. Ils permettent de regrouper des instructions, déterminent la portée des variables et peuvent être imbriqués les uns dans les autres. Il est délimité par des <code>{ }</code>.
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;La notion de <strong>bloc</strong> est importante dans la gestion du flux d'exécution. Les <strong>blocs</strong> permettent de regrouper des instructions, déterminent la portée des variables et peuvent être imbriqués les uns dans les autres. Ils sont délimités par des <code>{ }</code>.
                     </div>
                     <div class="small-font text-left">
                         <pre><code class="java">public static void main(String[] args)
@@ -987,7 +1026,7 @@ sudoku[2][2] = '5';//La valeurs '?' est remplacée par '5'</code></pre>
         </div>
     </div>
 
-    <div id="flux-conditions" class="step slide" data-nb="33" data-x="4000" data-y="3300">
+    <div id="flux-conditions" class="step slide" data-nb="33" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Conditions</h1>
@@ -1030,11 +1069,13 @@ else { //Si aucune des conditions précédentes n'est remplie
                   </div>
                 
                 </div>
+                <div class="row">
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="flux-conditions-switch" class="step slide" data-nb="34" data-x="6000" data-y="3300">
+    <div id="flux-conditions-switch" class="step slide" data-nb="34" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Conditions multiples</h1>
@@ -1044,8 +1085,7 @@ else { //Si aucune des conditions précédentes n'est remplie
                     </div>
                     <div class="small-font text-left">
                         <pre><code class="java">int position = 1;       
-switch (position) 
-{
+switch (position) {
     <span data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Lorsque <em>position</em> vaut 1, 2 ou 3, <code>'Sur le podium, bien joué !'</code> est affiché" data-html="true" data-template="<div class='popover large-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>">case 1:
     case 2:
     case 3:
@@ -1072,7 +1112,7 @@ switch (position)
         </div>
     </div>
 
-    <div id="flux-boucles" class="step slide" data-nb="35" data-x="8000" data-y="3300">
+    <div id="flux-boucles" class="step slide" data-nb="35" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Boucles <code>while</code></h1>
@@ -1121,7 +1161,7 @@ while(index < limite && index < taille);
         </div>
     </div>
 
-    <div id="flux-boucles-for" class="step slide" data-nb="36" data-x="10000" data-y="3300">
+    <div id="flux-boucles-for" class="step slide" data-nb="36" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Boucles <code>for</code></h1>
@@ -1141,7 +1181,7 @@ System.out.println("Affichage de tous les éléments de la suite de Fibonacci :"
 for(int i = 0; i < tableauFibonacci.length; i++)
 {
     //A chaque itération, l'index i est
-    //incrémenté tant qu'il ne dépasserelation
+    //incrémenté tant qu'il ne dépasse
     //pas la taille du tableau
     System.out.println(tableauFibonacci[i]); 
 }</code></pre>
@@ -1166,14 +1206,14 @@ for(int element : tableauFibonacci)
                     </div>
                     <h1 class="display-4">Bonus Java 8</h1>
                     <div class="small-font text-left">
-                        <pre><code class="java">Arrays.stream(tableauFibonacci).forEach(element -> System.out.println(element));</code></pre>
+                        <pre><code class="java">Arrays.stream(tableauFibonacci).forEach(System.out::println);</code></pre>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="flux-interruptions" class="step slide" data-nb="37" data-x="12000" data-y="3300">
+    <div id="flux-interruptions" class="step slide" data-nb="37" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Interruptions</h1>
@@ -1195,7 +1235,7 @@ for(int element : tableauFibonacci)
     }
     //La portion de code ci-dessous ne sera pas exécutée
     //lorsque la variable element vaudra 5
-    System.out.print(element+ ", "); 
+    System.out.print(element + ", "); 
     
 }//Affichage 0, 0, 1, 2, 3, </code></pre>
                     <div class="alert alert-primary small-font" role="alert">
@@ -1213,7 +1253,7 @@ for(int i = 0; i < 3; i++){
       if(sudoku[i][j] == '?'){
         break parcours_boucle; //On sort des deux boucles
       }
-      System.out.print(sudoku[i][j]+ ", "); 
+      System.out.print(sudoku[i][j] + ", "); 
     } 
 }//Affichage 2, 9, </code></pre>
                     <div class="alert alert-primary small-font" role="alert">
@@ -1227,7 +1267,7 @@ for(int i = 0; i < 3; i++){
         </div>
     </div>
 
-    <div id="flux-interruptions-continue" class="step slide" data-nb="38" data-x="14000" data-y="3300">
+    <div id="flux-interruptions-continue" class="step slide" data-nb="38" data-rel-x="2000" data-y="3300">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Interruptions</h1>
@@ -1246,7 +1286,7 @@ for(int element : tableauFibonacci)
   }
   //La portion de code ci-dessous ne sera pas exécutée
   //lorsque la variable element est paire
-  System.out.print(element+ ", "); 
+  System.out.print(element + ", "); 
   
 }//Affichage 1, 3, 5, 13, 21, 55 </code></pre>
                 </div>
@@ -1255,54 +1295,259 @@ for(int element : tableauFibonacci)
         </div>
     </div>
 
-    <div id="flux-exceptions" class="step slide" data-nb="39" data-x="16000" data-y="3300">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container-fluid text-center">
-                <h1 class="display-3">Exceptions</h1>
-                <div class="container-fluid">
-                    <div class="alert alert-primary small-font" role="alert">
-                      <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsque la JVM détecte des erreurs à l'exécution d'un programme, des <em>exceptions</em> sont levées et peuvent interrompre le traitement. Elles peuvent être gérées en utilisant le mécanisme du <code>try catch</code>.
-                    </div>
-                    <div class="row">
-                    
-                      <div class="col-lg-6 small-font text-left">
-                        <pre><code class="java">int[] tableauFibonacci = {0, 0, 1, 2, 3};
-for(int i = 0; i < 6; i++){
+    <div id="flux-exceptions" class="step slide" data-nb="39" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Exceptions
+          <div class="btn-group">
+              <button class="btn btn-transparent btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Throwable</button>
+              <div class="dropdown-menu">
+                <li class="dropdown-item dropdown-submenu">
+                  <a tabindex="-1" href="#">
+                    Error
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="status">
+                        AssertionError
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                        ...
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item dropdown-submenu">
+                  <a tabindex="-1" href="#">
+                    Exception
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item dropdown-submenu">
+                      <a tabindex="-1" href="#">
+                        IOException
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="status">
+                            EOFException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            FileNotFoundException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            UnknownHostException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            ...
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu">
+                      <a tabindex="-1" href="#">
+                        RuntimeException
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="status">
+                            ArrayIndexOutOfBoundsException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            BufferOverflowException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            ClassCastException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            NullPointerException
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                            ...
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" bypass class="dropdown-item interaction" data-module="git" data-action="compare">
+                        ...
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+            </div>
+            </h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ce n'est pas parce qu'un programme compile, qu'il ne comporte pas de bugs, et qu'il ne peut pas y avoir de problèmes à l'exécution. A la compilation, on parle d'<strong>erreurs de compilation</strong> qui empêche de compiler le programme. A l'exécution, on parle d'<strong>exceptions</strong> qui peuvent planter le programme lorsqu'elles ne sont pas gérées correctement.
+            </div>
+            
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">Fautes de saisie utilisateur</li>
+              <li class="list-group-item">Ressources inexistantes</li>
+              <li class="list-group-item">Problèmes réseaux</li>
+              <li class="list-group-item">Problèmes matériels</li>
+              <li class="list-group-item">Erreurs de programmation</li>
+              <li class="list-group-item">...</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;On distingue la branche <code>Error</code> qui correspond aux erreur internes au système d'exécution Java et qui ne sont pas vraiment <em>gérables</em> par le programmeur, et la branche <code>Exception</code>, qui se sépare elle-même en plusieurs branches, dont notamment les <code>RuntimeException</code>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="flux-exceptions-2" class="step slide" data-nb="40" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les <code>RuntimeExceptions</code></h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une exception <code>RuntimeException</code> survient systématiquement à cause d'une erreur de programmation. Les autres correspondent à des erreurs <em>externes</em> au programme.
+            </div>
+          </div>
+          <div class="row big-top-margin ">
+              <div class="col-lg-6 small-font text-left">
+                <button id="ArrayIndexOutOfBoundsException" class="pull-right btn btn-primary"><i class="fa fa-icon fa-times-circle"></i></button>
+                <pre><code class="java">int[] tableauFibonacci = {0, 0, 1, 2, 3};
+for(int i = 0; i < <span id="ArrayIndexOutOfBoundsExceptionErreur" class="text-danger">6</span>; i++){
   //Lorsque i va valoir 5, une exception va être levée
   //et va interrompre le traitement
   System.out.print(tableauFibonacci[i] + ", "); 
 }//Affichage : 0, 0, 1, 2, 3 </code></pre>
-                        <div class="text-danger">=> Exception in thread "main" <span data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Classe de l'exception qui a été levée (Tentative d'accès à un élement du tableau en dehors des limites), ainsi ce dans ce cas précis, la valeur d'index qui a provoqué l'exception" data-html="true">java.lang.ArrayIndexOutOfBoundsException: 5</span>
-                          at <span data-toggle="popover" data-trigger="hover" data-title="" data-placement="bottom" data-content="Endroit ou l'exception a été levée. Ici la classe <code>Fibonacci</code>, dans la méthode <code>main</code>, à la ligne 17" data-html="true">Fibonacci.main(Fibonacci.java:17)</span></div>
-                      </div>
-                      <div class="col-lg-6 small-font text-left">
-                        <pre><code class="java">int[] tableau = {5, 1, 0, 3};
+                <div id="ArrayIndexOutOfBoundsExceptionText" class="text-danger">=> Exception in thread "main" <span data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Classe de l'exception qui a été levée (Tentative d'accès à un élement du tableau en dehors des limites), ainsi ce dans ce cas précis, la valeur d'index qui a provoqué l'exception" data-html="true">java.lang.ArrayIndexOutOfBoundsException: 5</span>
+                  at <span data-toggle="popover" data-trigger="hover" data-title="" data-placement="bottom" data-content="Endroit ou l'exception a été levée. Ici la classe <code>Fibonacci</code>, dans la méthode <code>main</code>, à la ligne 17" data-html="true">Fibonacci.main(Fibonacci.java:17)</span></div>
+              </div>
+              <div class="col-lg-6 small-font text-left">
+                <button id="ArithmeticException" class="pull-right btn btn-primary"><i class="fa fa-icon fa-times-circle"></i></button>
+                <pre><code class="java">int[] tableau = {5, 1, 0, 3};
 for(int i = 0; i < tableau.length; i++){
-  try {
-    //L'exception java.lang.ArithmeticException: / by zero
-    //va être levée
+  <span id="ArithmeticExceptionErreur" class="text-danger">System.out.print(15 / tableau[i] + ", ");</span><span id="ArithmeticExceptionOK" class="text-success" style="display: none;">if (tableau[i] != 0) {
     System.out.print(15 / tableau[i] + ", ");
-  }
-  //On capture toutes les exceptions qui peuvent survenir
-  //dans le bloc try, on aurait pu spécifier quelle classe
-  //d'exception on attend, ici ArithmeticException
-  catch(Exception exception) {
-    System.out.print("ERREUR, ")
-  }
-}//Affichage : 3, 15, ERREUR, 5</code></pre>
-                    </div>
-                </div>
-                <div class="alert alert-danger small-font" role="alert">
-                        <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Les exceptions ne doivent être utilisées que pour la gestion d'erreurs inhabituelles ou rares car c'est un mécanisme coûteux. 
-                </div>
+  } else {
+   System.out.print("Erreur"); 
+  }</span>
+}</code></pre>
+<div id="ArithmeticExceptionText" class="text-danger">=> Exception in thread "main" java.lang.ArithmeticException: / by zero at Fibonacci.main(Fibonacci.java:17)</div>
+              </div>
             </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font big-top-margin" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;En principe, on n'essaye pas de gérer les <code>RuntimeException</code>, on parle d'exceptions <em>hors-contrôle</em>. Le programeur doit faire en sorte qu'elles ne surviennent pas.
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+
+    <div id="flux-exceptions-3" class="step slide" data-nb="41" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Les exceptions <em>sous contrôle</em></h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les exceptions <strong>sous contrôle</strong> sont toutes les exceptions en dehors des <code>RuntimeException</code> (et de celles qui en héritent). Celles-ci doivent être gérées par le programmeur.
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-6 small-font text-left">
+                <h1 class="display-5 text-center">Faire gérer l'exception par le <em>niveau supérieur</em></h1>
+                <pre><code class="java">methodeRuntimeException() throws RuntimeException {
+  ...
+  throw new RuntimeException("Erreur...");
+} 
+
+//On ne gère pas les RuntimeException
+methodeRuntimeException();
+
+//On signale au programmeur que cette méthode peut lancer des
+//exceptions de type IOException ou EOFException qu'il faudra gérer
+methodeAutreException() throws IOException, EOFException{
+  ...
+  throw new IOException("Erreur...");
+  ...
+  throw new EOFException("Erreur...");
+}</code></pre>
+              </div>
+              <div class="col-lg-6 small-font text-left">
+                <h1 class="display-5 text-center">Gérer l'exception <em>localement</em></h1>
+                <pre><code class="java">try {
+  methodeAutreException();
+} catch(IOException exception) {
+  //Gérer l'exception IOException
+  ...
+} catch(EOFException exception) {
+  //Gérer l'exception EOFException
+  ...
+} finally() {
+  //Dans tous les cas (exception ou pas), effectuer ce traitement
+  ...
+}</code></pre>
+              </div>
+            </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                  <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est possible de créer ses propres classes d'exceptions pour représenter des erreurs métier. 
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="chaines" class="step slide" data-nb="40" data-x="0" data-y="4400">
+
+    <div id="flux-exceptions-4" class="step slide" data-nb="42" data-rel-x="2000" data-y="3300">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Conseils sur l'utilisation des exceptions</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les <strong>exceptions</strong> sont un mécanisme puissant mais il faut les utiliser intelligemment. 
+            </div>
+            
+          </div>
+          <div class="container small-font big-top-margin">
+            <ul class="list-group">
+              <li class="list-group-item">La gestion des exceptions ne doit pas remplacer un test simple</li>
+              <li class="list-group-item">Ne pas gérer trop finement les exceptions</li>
+              <li class="list-group-item">Respecter la distinction entre exceptions <em>hors contrôle</em> et exceptions <em>sous-contrôle</em></li>
+              <li class="list-group-item">Ne pas gérer silencieusement les exceptions</li>
+              <li class="list-group-item">Ne pas renvoyer de <em>valeur par défaut</em> au lieu de lever une exception</li>
+              <li class="list-group-item">Ne pas hésiter à renvoyer des exceptions aux niveaux supérieurs</li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-danger small-font big-top-margin" role="alert">
+                  <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Les exceptions ne doivent être utilisées que pour la gestion d'erreurs inhabituelles ou rares car c'est un mécanisme coûteux. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="chaines" class="step slide" data-nb="43" data-x="0" data-y="4400">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
-                <h1 class="display-3">Chaines</h1>
+                <h1 class="display-3">Chaînes</h1>
                 <div class="container-fluid big-top-margin">
                     <div class="alert alert-primary small-font" role="alert">
                       <i class="fa fa-icon fa-info-circle"></i>&nbsp;Nous avons vu qu'un caractère pouvait être représenté par le type <code>char</code>. Une chaîne de caractère peut dont être représentée par un tableau de caractères <code>char[]</code>.
@@ -1319,10 +1564,10 @@ for(int i = 0; i < tableau.length; i++){
             </div>
         </div>
     </div>
-    <div id="chaines-classe" class="step slide" data-nb="41" data-x="2000" data-y="4400">
+    <div id="chaines-classe" class="step slide" data-nb="44" data-rel-x="2000" data-y="4400">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
-                <h1 class="display-3">La classe String</h1>
+                <h1 class="display-3">La classe <code>String</code></h1>
                 <div class="container-fluid">
                   <div class="alert alert-warning small-font" role="alert">
                       <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Contrairement aux types primitifs, le type <code>String</code> est en fait une <em>classe</em>. Ce sont des références à des objets qui sont manipulées, pas les valeurs elles-mêmes. On utilise donc l'instruction <code>new</code> pour créer une référence vers un objet.
@@ -1332,19 +1577,20 @@ for(int i = 0; i < tableau.length; i++){
 String chaine; //chaine sera destinée à contenir une référence à un objet de type String
 
 //Déclaration et initialisation d'un objet de type String
-String chaine2 = new String(); //référence à une chaîne vide
-String chaine3 = new String("Hello"); //référence à une chaîne contenant "Hello
+String chaine1 = ""; //référence à une chaîne vide
+String chaine2 = new String(); //référence à une nouvelle chaîne vide 
+String chaine3 = new String("Hello"); //référence à une chaîne contenant "Hello"
 String chaine4 = "Hello";// Le compilateur crée automatiquement un objet de type String contenant "Hello"</code></pre>
                   </div>
                   <div class="alert alert-primary small-font" role="alert">
-                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les notions d'objet et de classe seront abordées dans le cous Java 220.
+                    <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les notions d'objet et de classe seront abordées dans le cours <a href="https://pjvilloud.github.io/ipi-java-220-cours/#/accueil" target="_blank">Java 220</a>.
                   </div>              
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="chaines-manipulation" class="step slide" data-nb="42" data-x="4000" data-y="4400">
+    <div id="chaines-manipulation" class="step slide" data-nb="45" data-rel-x="2000" data-y="4400">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Manipulation de chaînes</h1>
@@ -1407,7 +1653,7 @@ new String("Hello") == "Hello";//false, références différentes
         </div>
     </div>
 
-    <div id="chaines-manipulation-2" class="step slide" data-nb="43" data-x="6000" data-y="4400">
+    <div id="chaines-manipulation-2" class="step slide" data-nb="46" data-rel-x="2000" data-y="4400">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Manipulation de chaînes</h1>
@@ -1424,7 +1670,7 @@ new String("Hello") == "Hello";//false, références différentes
                       </thead>
                       <tbody>
                         <tr>
-                            <td>Debut/Fin</td>
+                            <td>Début/Fin</td>
                             <td><code>startsWith(String)</code> et <code>endsWith(String)</code> <i class="fa fa-icon fa-arrow-right"></i> <code>boolean</code></td>
                             <td><pre class="no-bottom-margin"><code class="java">"Hello".startsWith("He");//true
 "Hello".startsWith("he");//false
@@ -1471,7 +1717,7 @@ new String("Hello") == "Hello";//false, références différentes
         </div>
     </div>
 
-    <div id="chaines-console" class="step slide" data-nb="44" data-x="8000" data-y="4400">
+    <div id="chaines-console" class="step slide" data-nb="47" data-rel-x="2000" data-y="4400">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">La console</h1>
@@ -1490,7 +1736,7 @@ System.out.print("How are you ?");
                     </div>
                     <div class="col-lg-6">
                       <h3 class="display-5">Lire dans la console</h3>
-                      <pre><code class="java small-font text-left">System.out.println("Que est votre nom ?");
+                      <pre><code class="java small-font text-left">System.out.println("Quel est votre nom ?");
 Scanner scanner = new Scanner(System.in);
 
 String ligneSaisie = scanner.nextLine();
@@ -1505,9 +1751,11 @@ scanner.close();//Appeler lorsque les saisies sont terminées</code></pre>
                     </div>
                 </div>
             </div>
+            <div class="row">
+            </div>
         </div>
     </div>
-    <div id="bonus" class="step slide" data-nb="45" data-x="0" data-y="5500">
+    <div id="bonus" class="step slide" data-nb="48" data-x="0" data-y="5500">
         <div class="jumbotron jumbotron-fluid">
             <div class="container text-center">
                 <h1 class="display-3">Bonus</h1>
@@ -1515,24 +1763,24 @@ scanner.close();//Appeler lorsque les saisies sont terminées</code></pre>
                     <ul class="list-group">
                       <li class="list-group-item">La récursivité</li>
                       <li class="list-group-item">Maitriser son IDE</li>
+                      <li class="list-group-item">Les méthodes à <em>ellipse</em></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div id="bonus-recursivite" class="step slide" data-nb="46" data-x="2000" data-y="5500">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container-fluid text-center">
-                <h1 class="display-3">Récursivité</h1>
-                <div class="container-fluid">
-                  <div class="alert alert-primary small-font" role="alert">
-                      <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fonction est dite récursive lorsqu'elle s'appelle elle-même, c'est-à-dire lorsque dans le corps de cette méthode figure un appel à cette même méthode. Exemple le plus parlant : la fonction factorielle.
-                    </div>
-                
-                <div class="row">
-                  
-                    <div class="col-lg-6 small-font text-left">
-                      <pre><code class="java">
+    <div id="bonus-recursivite" class="step slide" data-nb="49" data-rel-x="2000" data-y="5500">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Récursivité</h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+              <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une fonction est dite récursive lorsqu'elle s'appelle elle-même, c'est-à-dire lorsque dans le corps de cette méthode figure un appel à cette même méthode. Exemple le plus parlant : la fonction factorielle.
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6 small-font text-left">
+                  <pre><code class="java">
 static int factorielle(int nombre) {
     if (nombre == 1) {
         return 1;
@@ -1540,22 +1788,32 @@ static int factorielle(int nombre) {
         return (nombre * factorielle(nombre - 1));
     }
 }</code></pre>
-                    </div>
-                    <div class="col-lg-6">
-                      <img src="img/recursivite.png" alt="">
-                    </div>
                 </div>
+                <div class="col-lg-6">
+                  <img src="img/recursivite.png" alt="">
+                </div>
+              </div>
             </div>
+            <div class="container-fluid">
+              <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;A chaque nouvel appel de <code>factorielle</code>, un espace mémoire est alloué permettant de stocker les variables locales, le paramètre <code>nombre</code> et la valeur de retour. Les appels s'empilent jusqu'à arriver au <code>return 1</code> qui va dépiler les appels et compiler la valeur de retour.
+              </div>
+              <div class="row big-top-margin">
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div id="bonus-maitrise" class="step slide" data-nb="47" data-x="4000" data-y="5500">
+    <div id="bonus-maitrise" class="step slide" data-nb="50" data-rel-x="2000" data-y="5500">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Maitriser son IDE</h1>
                 <div class="container">
                 <ul class="list-group">
                   <li class="list-group-item">Auto-complétion</li>
+                  <li class="list-group-item">Deboguer</li>
                   <li class="list-group-item">Indenter automatiquement</li>
                   <li class="list-group-item">Réorganiser les imports</li>
                   <li class="list-group-item">Renommer une classe, une méthode, une variable</li>
@@ -1568,12 +1826,49 @@ static int factorielle(int nombre) {
         </div>
     </div>
 
+    <div id="bonus-ellipsis" class="step slide" data-nb="51" data-rel-rel-x="2000" data-y="5500">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid text-center">
+          <h1 class="display-3">Méthodes à <em>ellipses</em></h1>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font" role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;En utilisant le principe d'<em>ellipse</em>, il est possible de définir des méthodes qui peuvent être appelées avec un nombre variable de paramètres.
+            </div>
+          </div>
+          <div class="container small-font text-left">
+            <pre><code class="java"><span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="Un paramètre à <em>ellipse</em> est spécifié en indiquant <code>...</code> après le type du paramètre. Ici, on ne pourra spécifier que des paramètres de type <code>String</code>.">void affiche(String... textes) {</span>
+  for(String texte : textes){
+    System.out.println(texte);
+  }
+}
+
+affiche("Hello");
+affiche("Hello", "World");
+
+<span data-toggle="popover" data-offset="0" data-trigger="hover click" data-placement="right" data-html="true" data-content="Si la méthode a d'autres paramètres que le paramètre à <em>ellipse</em>, ils doient être spécifier avant. On peut également appeler une autre méthode comportant des paramètres à <em>ellipse</em> en passant la variable directement.">void afficheObjectXFois(int nbFois, Object... objects) {
+  for (int i = 0; i < nbFois, i++){</span>
+    separeMotEspaces(objects);
+  }
+}
+
+afficheObjectXFois(5, "Hello");//Affiche 5 fois Hello
+afficheObjectXFois(1, "Hello", 50, true);//Affiche Hello 50 true </code></pre>
+          </div>
+          <div class="container-fluid">
+            <div class="alert alert-primary small-font " role="alert">
+                <i class="fa fa-icon fa-info-circle"></i>&nbsp;Ici la variable <code>textes</code> est en fait de type <code>String[]</code>. Une variable <em>ellipse</em> doit être systématiquement le dernier paramètre dans la signature de la méthode.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </div>
 
-<script src="bower_components/impress-js/js/impress.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="js/impress.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/highlight.min.js"></script>
 <script src="js/script.js"></script>
 

@@ -1,4 +1,5 @@
-impress().init();
+var imp = impress();
+imp.init();
 hljs.initHighlightingOnLoad();
 var nbSlides = $(".step.slide").length;
 var showPopover = new URL(window.location).searchParams.get("showPopover");
@@ -44,4 +45,44 @@ $(window).on('hashchange', function(e){
     $('#my-navbar li a[href="' + newHash.substring(0,newHash.lastIndexOf("-")) + '"]').addClass("active");
     $('#my-navbar li a[href="' + newHash + '"]').addClass("active");
     
+});
+
+$(window).on('contextmenu', function(e){
+  e.preventDefault();
+  imp.prev();
+});
+
+$(window).on('click', function(e){
+  if( (e.which == 2) ) {
+      e.preventDefault();
+      imp.next();
+   }
+});
+
+$(window).on('click', function(e){
+  if( (e.which == 2) ) {
+      e.preventDefault();
+      imp.next();
+   }
+});
+
+$("#ArrayIndexOutOfBoundsException").click(function(event) {
+  $(event.target).toggleClass('btn-primary').toggleClass('btn-success');
+  $("#ArrayIndexOutOfBoundsException > i").toggleClass('fa-times-circle ');
+  $("#ArrayIndexOutOfBoundsException > i").toggleClass('fa-check-circle');
+
+  $("#ArrayIndexOutOfBoundsExceptionText").toggle();
+  $("#ArrayIndexOutOfBoundsExceptionErreur").toggleClass('text-danger').toggleClass('text-success')
+  var html = $("#ArrayIndexOutOfBoundsExceptionErreur").html();
+  $("#ArrayIndexOutOfBoundsExceptionErreur").html(html === '<span class="hljs-number">6</span>' ? 'tableauFibonacci.length' : '<span class="hljs-number">6</span>');
+});
+
+$("#ArithmeticException").click(function(event) {
+  $(event.target).toggleClass('btn-primary').toggleClass('btn-success');
+  $("#ArithmeticException > i").toggleClass('fa-times-circle ');
+  $("#ArithmeticException > i").toggleClass('fa-check-circle');
+
+  $("#ArithmeticExceptionText").toggle();
+  $("#ArithmeticExceptionErreur").toggle();
+  $("#ArithmeticExceptionOK").toggle();
 });
