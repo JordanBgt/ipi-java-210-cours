@@ -107,7 +107,8 @@
             &nbsp;
             <a class="btn btn-primary" href="https://github.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-github"></i></a>
             &nbsp;
-            <a class="btn btn-primary" href="https://linkedin.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-linkedin"></i></a>
+            <a class="btn btn-primary" href="https://linkedin.com/pjvilloud" target="_blank"><i class="fa fa-icon fa-linkedin"></i></a>&nbsp;
+            <a class="btn btn-primary" href="#" id="numSlide">1</a>
         </div>
     </span>
   </div>
@@ -212,7 +213,6 @@
                   <li class="list-group-item">Exécution de bytecode</li>
                   <li class="list-group-item">Chargement de code depuis Internet</li>
                   <li class="list-group-item">Reflection</li>
-                  <li class="list-group-item">The Fragile Superclass Problem</li>
               </ul>
             </div>
           </div>
@@ -389,11 +389,11 @@ public class HelloWorld
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Entiers</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les types primitifs entiers représentent les nombres sans partie décimale, positifs ou négatifs.
                     </div>
-                    <table class="table table-striped big-top-margin small-font">
+                    <table class="table table-striped big-top-margin small-font text-left">
                       <thead>
                         <tr>
                           <th>Type</th>
@@ -433,11 +433,11 @@ public class HelloWorld
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Réels</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les types primitifs à virgule flottante expriment les nombres réels avec une partie décimale, positifs ou négatifs.
                     </div>
-                    <table class="table table-striped big-top-margin small-font">
+                    <table class="table table-striped big-top-margin small-font text-left">
                       <thead>
                         <tr>
                           <th>Type</th>
@@ -492,7 +492,7 @@ public class HelloWorld
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Booléen</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le type <code>boolean</code> peut avoir deux valeurs, <code>true</code> (vrai) ou <code>false</code> (faux). Il est utilisé pour évaluer des conditions logiques.
                     </div>
@@ -505,11 +505,11 @@ public class HelloWorld
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Types énumérés</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Lorsqu'une variable ne peut contenir qu'un ensemble limité de données, il est possible de définir un type énuméré. Ce type possède un nombre fini de valeurs nommées.                                                                                            
                     </div>
-                    <pre><code class="java small-font">//Définition du type énuméré Taille
+                    <pre><code class="java small-font text-left">//Définition du type énuméré Taille
 enum Taille {SMALL, MEDIUM, LARGE, EXTRA_LARGE};
 //L'ordre de définition des constantes SMALL, MEDIUM... est important !</code></pre>
                 </div>
@@ -521,11 +521,11 @@ enum Taille {SMALL, MEDIUM, LARGE, EXTRA_LARGE};
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Variables</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une variable est un contenant nommé permettant de <em>stocker</em> une valeur d'un type, ou une référence à un objet. On la déclare en spécifiant son type, puis son nom. Toute variable doit être initialisée avant d'être utilisée. Sinon une erreur de compilation sera signalée par le compilateur.
                     </div>
-                    <pre><code class="java small-font">boolean enConge;//Déclaration de la variable enConge
+                    <pre><code class="java small-font text-left">boolean enConge;//Déclaration de la variable enConge
 enConge = false;//Initialisation de la variable en affectant la valeur false
 int joursVacances = 25;//Déclaration et initialisation de la variable joursVacances en une ligne.
 double salaire, prime;//Déclaration de deux variables en une ligne. Non recommandé.
@@ -534,7 +534,7 @@ Taille s = Taille.SMALL;//Déclaration d'une variable du type énuméré Taille<
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est fortement recommandé de donner un nom pertinent à chaque variable et d'éviter les noms à rallonge
                     </div>
-                    <pre><code class="java small-font">int a, var1, monEntier;// Déconseillé car non pertinent
+                    <pre><code class="java small-font text-left">int a, var1, monEntier;// Déconseillé car non pertinent
 double Salaire, primeFinAnnée; //Déconseillé car majuscule et accents
 short mon Age, m@x;//Erreur car espaces ou caractères non alpha-numériques
 boolean estPresent;//OK
@@ -549,11 +549,11 @@ boolean public;//Interdit car public est un mot réservé de java</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Constantes</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une constante ne peut plus changer de valeur après son initialisation. On la déclare avec le mot <code>final</code>. Par convention, les noms des constantes sont en majuscules et les mots sont séparés par des _
                     </div>
-                    <pre><code class="java small-font">public class ExempleConstantes {
+                    <pre><code class="java small-font text-left">public class ExempleConstantes {
     //Visible dans toute la classe
     public static final short NOMBRE_MOIS_ANNEE = 12;
     public static final short NOMBRE_TRIMESTRE_ANNEE = NOMBRE_MOIS_ANNEE / 3;
@@ -578,11 +578,11 @@ boolean public;//Interdit car public est un mot réservé de java</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Méthodes</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                       <i class="fa fa-icon fa-info-circle"></i>&nbsp;Une méthode est un bloc de code qui effectue un traitement. On peut comparer une méthode à une fonction mathématique.
                     </div>
-                    <div class="row big-top-margin">
+                    <div class="row big-top-margin text-left">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-4">
                           <pre><code class="java small-font"><span data-toggle="popover" data-trigger="hover" data-placement="left" title="Type de la valeur de retour" data-content="Le type de retour de la méthode doit être précisé. Une méthode ne peut renvoyer qu'un seul type (ou aucun en utilisant le mot-clé <code>void</code>)" data-html="true" data-offset="0, 25">int</span> <span data-toggle="popover" data-trigger="hover" data-placement="top" title="Nom de la méthode" data-content="C'est ce nom qui sera utilisé pour appeler la méthode" data-html="true">auCarre</span><span data-toggle="popover" data-trigger="hover" data-placement="right" title="Arguments" data-content="Les arguments sont les valeurs d'entrées fournies à la méthode pour lui permettre d'effectuer son traitement. Lorsqu'il y en a plusieurs, on les sépare par une virgule." data-html="true">(int x)</span> 
@@ -625,11 +625,11 @@ afficheBonjour(); //Affiche "Bonjour !"</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Opérateurs arithmétiques</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les opérateurs arithmétiques + - * / % permettent d'effectuer les opérations de bases que sont l'addition, la soustraction, la multiplication et la division
                     </div>
-                    <pre><code class="java small-font">int quinze = 3 * 5; int deux = quinze - 13;
+                    <pre><code class="java small-font text-left">int quinze = 3 * 5; int deux = quinze - 13;
 int sept = quinze / deux; //Division entière car les variables sont des entiers
 int un = 15 % 2; //Reste de la division entière de 15 par 2 (modulo)
 double quinzeDouble = 15.0; 
@@ -650,11 +650,11 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Opérateurs relationnels et booléens</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid ">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les opérateurs relationnels et booléens permettent de tester des conditions
                     </div>
-                    <table class="table table-striped smaller-font">
+                    <table class="table table-striped smaller-font text-left">
                       <thead>
                         <tr>
                           <th>Test</th>
@@ -681,7 +681,7 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
                         <tr>
                             <td>"OU" logique</td>
                             <td>||</td>
-                            <td data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="De même, la deuxième expression n'est pas calculée si la première a pu être évaluée à <code>true</code> (puisque le résultat serait <code>true</code> de toute façon. Ainsi <code>x == 0 || 1 / x > 0 </code> ne lance jamais d'erreurs car la division par 0 est évitée avec le premier test. L'inversion du test peut cependant lever une exception." data-html="true" data-template="<div class='popover large-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>"><pre><code class="java">true || false // true</code></pre></td>
+                            <td data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="La deuxième expression n'est pas calculée si la première a pu être évaluée à <code>true</code> (puisque le résultat serait <code>true</code> de toute façon. Ainsi <code>x == 0 || 1 / x > 0 </code> ne lance jamais d'erreurs car la division par 0 est évitée avec le premier test. L'inversion du test peut cependant lever une exception." data-html="true" data-template="<div class='popover large-popover' role='tooltip'><div class='arrow'></div><h3 class='popover-header'></h3><div class='popover-body'></div></div>"><pre><code class="java">true || false // true</code></pre></td>
                         </tr>
                         <tr>
                             <td>"NON" logique</td>
@@ -716,11 +716,11 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Opérateurs binaires</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les opérateurs binaires permettent de travailler directement sur les bits des types entiers.
                     </div>
-                    <table class="table table-striped smaller-font">
+                    <table class="table table-striped smaller-font text-left">
                       <thead>
                         <tr>
                           <th>Opération</th>
@@ -769,11 +769,11 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Priorités des opérateurs</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid ">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les règles de priorités entre opérateurs arithmétiques sont les mêmes qu'en algèbre.
                     </div>
-                    <table class="table table-striped smaller-font">
+                    <table class="table table-striped smaller-font text-left">
                       <thead>
                         <tr>
                           <th>Expression</th>
@@ -812,12 +812,12 @@ x -= 2;//équivalent à x = x - 2; x vaut 4</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Conversions</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-warning small-font" role="alert">
                         <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Java peut effectuer des conversions automatiques entre types. Cela peut cependant mener à des pertes d'information.
                     </div>
                     <div class="row">
-                        <div class="col-lg-6 small-font">
+                        <div class="col-lg-6 small-font text-left">
                             <p class="text-center">Exemple de perte de précision :</p>
                             <div>
                                 <pre><code class="java">int n = 987654321;
@@ -832,7 +832,7 @@ float f = n;// f vaut 9.8765434E8</code></pre>
                             </ul>
                         </div>
                         <div class="col-lg-6 text-center">
-                            <img src="img/conversions.png" alt="Converions" width="450">
+                            <img src="img/conversions.png" alt="Converions" width="700">
                             <div class="alert alert-warning small-font" role="alert">
                                 <i class="fa fa-icon fa-exclamation-triangle"></i>&nbsp;Les flèches noires représentent les conversions sans perte de données, les flèches en pointillées celles avec perte de données.
                             </div>
@@ -848,13 +848,13 @@ float f = n;// f vaut 9.8765434E8</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Transtypages (cast)</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
-                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est également possible de forcer manuellement ces conversions lorsque les besoins du programme le nécessitent. Pour cela, on prefixe la variable à transtyper du type cible entre parenthèses : <pre><code class="java">short s = 56;
+                        <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est également possible de forcer manuellement ces conversions lorsque les besoins du programme le nécessitent. Pour cela, on prefixe la variable à transtyper du type cible entre parenthèses : <pre><code class="java text-left">short s = 56;
 int i = (int) s</code></pre>
                     </div>
                     <p class="text-center">Exemples de transtypage :</p>
-                    <div class="small-font">
+                    <div class="small-font text-left">
                         <pre><code class="java">//Transtypage double -> int
 double d = 4.567;
 int n = (int)d;// d vaut 4 (la partie décimale est perdue)
@@ -875,11 +875,11 @@ short s = (short)i; //s vaut -10536...</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Tableaux</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est souvent utile de pouvoir gérer un ensemble de valeurs du même type. On utilise pour cela un <strong>tableau</strong> java. A noter que la notion de <strong>tableau</strong> n'est pas un type primitif, il faut donc utiliser l'instruction <code>new</code> pour l'initialiser.
                     </div>
-                    <div class="small-font">
+                    <div class="small-font text-left">
                         <pre><code class="java">//Déclaration d'un tableau d'entier
 int[] tableauEntier, tableauEntier2; //Le tableau est déclaré mais non initialisé
 
@@ -912,11 +912,11 @@ int tailleTableau = tableauEntier.length;</code></pre>
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Manipulation de tableaux</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Il est souvent nécessaire de manipuler les tableaux (copier, trier, rechercher). Java fournit des utilitaires pour effectuer ces opérations courantes.
                     </div>
-                    <div class="small-font">
+                    <div class="small-font text-left">
                         <pre><code class="java">//Copie de tableaux
 //Attention, ceci n'est pas une copie ! 
 tableauEntier = tableauEntier2;// tableauEntier2 et tableauEntier font maintenant référence au même tableau
@@ -946,11 +946,11 @@ Arrays.fill(tableanEntier, 6); //Remplie tous les éléments du tableau avec la 
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid text-center">
                 <h1 class="display-3">Tableaux multi-dimensionnels</h1>
-                <div class="container-fluid text-left">
+                <div class="container-fluid">
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Les tableaux à deux dimensions sont souvent utilisés mais il est également possible de créer des tableaux à trois, quatre dimensions...
                     </div>
-                    <div class="small-font">
+                    <div class="small-font text-left">
                         <pre><code class="java">//Déclaration d'un tableau bidimensionnel
 char[][] tableau2D;// [][] pour deux dimensions, [][][] pour trois dimensions...
 
@@ -984,7 +984,7 @@ sudoku[2][2] = '5';//La valeur '?' est remplacée par '5'</code></pre>
                     <div class="alert alert-primary small-font" role="alert">
                         <i class="fa fa-icon fa-info-circle"></i>&nbsp;Le <strong>flux d'exécution</strong> du programme peut être contrôlé pour satisfaire les besoins du programme.
                     </div>
-                    <div class="small-font">
+                    <div class="small-font ">
                         <ul class="list-group">
                             <li class="list-group-item">Portée d'un bloc</li>
                             <li class="list-group-item">Conditions</li>

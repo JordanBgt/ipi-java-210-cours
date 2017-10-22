@@ -10,6 +10,7 @@ rootElement.addEventListener( "impress:stepenter", function(event) {
 
   var currentStep = event.target;
   var numeroSlide = $(currentStep).attr("data-nb");
+  $("#numSlide").html(numeroSlide);
   var percentageSlide = Math.round(numeroSlide * 100 / nbSlides);
   $("#progress").attr("style", "width: " + percentageSlide + "%;");
   $("#progress").attr("aria-valuenow", percentageSlide);
@@ -85,4 +86,13 @@ $("#ArithmeticException").click(function(event) {
   $("#ArithmeticExceptionText").toggle();
   $("#ArithmeticExceptionErreur").toggle();
   $("#ArithmeticExceptionOK").toggle();
+});
+
+$(window).on('mousewheel', function(event) {
+  if(event.deltaY < 0) {
+    imp.next();
+  } else{
+    imp.prev();
+  }
+  e.preventDefault();
 });
