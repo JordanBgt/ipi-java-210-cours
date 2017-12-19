@@ -955,7 +955,7 @@ Arrays.fill(tableanEntier, 6); //Remplie tous les éléments du tableau avec la 
 char[][] tableau2D;// [][] pour deux dimensions, [][][] pour trois dimensions...
 
 //Initialisation d'un tableau bidimensionnel
-tableau2D = new char[3,4];//Equivalent à un tableau de 3 colonnes et 4 lignes
+tableau2D = new char[3][4];//Equivalent à un tableau de 3 colonnes et 4 lignes
 char [][] sudoku = {
     {'2', '1', '9'},
     {'8', '4', '3'},
@@ -1017,8 +1017,8 @@ sudoku[2][2] = '5';//La valeur '?' est remplacée par '5'</code></pre>
         }
         int entierGlobalMethode = 5; //Exception : entierGlobalMethode est déjà défini
     }
+    System.out.println(entierLocalBloc); //Exception : entierLocalBloc n'est plus accessible ici
     int entierLocalBloc = 4; //entierLocalBloc n'est plus accessible, il peut être de nouveau défini
-    System.out.println(entierLocalBloc); //Exception : entierLocalBloc n'est pas accessible ici
 }</code></pre>
                     </div>
                 </div>
